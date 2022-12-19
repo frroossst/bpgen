@@ -1,0 +1,12 @@
+[package]
+name = "bpgen"
+version = "0.1.0"
+edition = "2021"
+description = "generates boilerplate for common languages"
+license = "MIT"
+authors = ["Adhyan H. <adhyanpatel@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.0.26", features = ["derive"] }
