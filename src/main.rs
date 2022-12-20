@@ -28,7 +28,7 @@ fn main()
     match lang_cmp.as_str()
         {
         "rust" => { lang_util::parse_language_and_type(lang_cmp, type_of) }
+        "c" => { lang_util::parse_language_and_type(lang_cmp, type_of) }
         _ => { eprintln!("language not supported") }
         }
-
     }
