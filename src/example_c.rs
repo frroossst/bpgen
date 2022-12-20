@@ -7,3 +7,9 @@ int main()
     return 0;
     }"
     }
+
+pub fn get_hello_world_make_file() -> &'static str
+    {
+    "output: main.c
+\tgcc main.c -o output"
+    }

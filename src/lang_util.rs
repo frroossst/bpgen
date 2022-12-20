@@ -6,7 +6,11 @@ pub fn parse_language_and_type(lang_cmp: String, type_of: Option<String>)
     let lcmp = lang_cmp.as_str();
     match lcmp
         {
-        "c" => { write_to_file(example_c::get_hello_world(), "main.c") }, 
+        "c" => 
+            { 
+            write_to_file(example_c::get_hello_world(), "main.c");
+            write_to_file(example_c::get_hello_world_make_file(), "Makefile");
+            }, 
         _ => { panic!() },
         } 
 
