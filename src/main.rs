@@ -1,3 +1,4 @@
+#![allow(unused_parens)]
 use clap::Parser;
 use bpgen::lang_util;
 
@@ -24,11 +25,16 @@ fn main()
     {
     let args = Args::parse();
 
+    // TODO: replace with love_rust()
     println!("boilerplate: powered with <3 by Rust");
 
-    if args.clean != ""
+    if (args.clean != "")
         {
-        println!("{:?}", args.clean)
+        // NOTE:
+        // It is okay to pass args.clean as it wouldn't have reached here if it was
+        // empty, validity of the value of args.clean is handled further down the 
+        // stack
+        lang_util::remove_boilerplate_files(&args.clean, args.type_of)
         }
 
     }

@@ -21,7 +21,7 @@ pub fn remove_boilerplate_files(lang: &str, type_of: Option<String>)
     match lang
         {
         "c" => { remove_files(example_c::get_hello_world_files().to_vec()) },
-        _ => {}
+        _ => { unimplemented!() }
         }
     }
 
