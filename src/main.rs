@@ -36,5 +36,13 @@ fn main()
         // stack
         lang_util::remove_boilerplate_files(&args.clean, args.type_of)
         }
+    else
+        {
+        match args.lang
+            {
+            Some(lang) => { lang_util::parse_language_and_type(&lang, args.type_of)  },
+            None => { eprintln!("bpgen failed, lang arg not provided") },
+            }
+        }
 
     }

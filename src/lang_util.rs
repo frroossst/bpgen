@@ -1,15 +1,13 @@
 use std::{fs, io::Write};
 use crate::{example_c};
 
-pub fn parse_language_and_type(lang_cmp: String, type_of: Option<String>)
+pub fn parse_language_and_type(lang_cmp: &str, type_of: Option<String>)
     {
-    let lcmp = lang_cmp.as_str();
-    match lcmp
+    match lang_cmp
         {
         "c" => 
             { 
-            write_to_file(example_c::get_hello_world(), "main.c");
-            write_to_file(example_c::get_hello_world_make_file(), "Makefile");
+            example_c::parse_c_lang_type(type_of)
             }, 
         _ => { panic!() },
         } 
